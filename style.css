@@ -1,0 +1,44 @@
+html,
+body {
+    margin: 0;
+    height: 120%;
+    background-image: linear-gradient(to bottom left, rgb(237, 237, 225), rgb(237, 142, 142), rgb(245, 75, 75), pink, rgb(143, 143, 252));
+}
+
+
+
+@font-face {
+    font-family: roboto;
+    src: url('Indie_Flower/IndieFlower-Regular.ttf');
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+
+
+.container{
+    display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center;     /* Vertical center */
+  height: 100vh;     
+  display: block
+}
+img {
+    width: 100px;
+    height: 100px;
+}
+
+#submit{
+    background-color:pink;
+}
+h2{
+    text-align: center;
+    font-family: roboto;
+}

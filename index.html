@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container" class=" justify-content-center align-items-center">
+        <h2>Add Product</h2>
+
+        <form class="border p-4 rounded shadow bg-light  " onsubmit=addProduct(event)
+            id="myForm">
+            <label class="form-label" for="name-product">product name</label>
+            <input class="form-control" type="text" id="name-product" required>
+
+            <label class="form-label" for="price">price</label>
+            <input class="form-control" type="number" id="price" min="0" required>
+
+            <label for="cars">Choose a category:</label>
+            <select id="categories" name="car" class="form-select" required>
+                <option value="please choose category" disabled selected></option>
+                <option value="Drinks">Drinks</option>
+                <option value="Meat">Meat</option>
+                <option value="Dairy">Dairy</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Basic">Basic</option>
+            </select>
+
+            <label class="form-label" for="pic">picture url</label>
+            <input class="form-control" type="url" id="pic" required>
+
+
+            <button class="btn " id="submit">Add product</button>
+
+        </form>
+
+        <h2>My Cart</h2>
+        <table id="products" class="table table-danger table-striped border p-4 rounded shadow bg-light">
+            <thead>
+                <td>name</td>
+                <td>price</td>
+                <td>category</td>
+                <td>pic</td>
+                <td>Actions</td>
+            </thead>
+            <tbody id="products-table">
+
+
+
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
